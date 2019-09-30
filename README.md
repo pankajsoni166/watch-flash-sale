@@ -1,4 +1,4 @@
-# watch-flash-sale
+# flash sale for Watch
 
 - Rest API's:
 -------------
