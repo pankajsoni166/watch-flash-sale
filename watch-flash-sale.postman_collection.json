@@ -1,0 +1,191 @@
+{
+	"variables": [],
+	"info": {
+		"name": "watch-flash-sale",
+		"_postman_id": "b172a271-b178-f769-5a63-42b135ca4adb",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/users",
+			"request": {
+				"url": "http://localhost:8080/users",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\n    \"id\": \"1\",\n    \"name\": \"Raj\",\n    \"email\": \"raj@test.com\"\n},\n\n{\n    \"id\": \"2\",\n    \"name\": \"Reena\",\n    \"email\": \"reena@test.com\"\n},\n\n{\n    \"id\": \"3\",\n    \"name\": \"Amod\",\n    \"email\": \"Amod@test.com\"\n},\n\n{\n    \"id\": \"4\",\n    \"name\": \"Pankaj\",\n    \"email\": \"pankaj@test.com\"\n},\n\n{\n    \"id\": \"5\",\n    \"name\": \"Surya\",\n    \"email\": \"surya@test.com\"\n},\n\n{\n    \"id\": \"6\",\n    \"name\": \"Santosh\",\n    \"email\": \"santosh@test.com\"\n},\n\n{\n    \"id\": \"7\",\n    \"name\": \"Teja\",\n    \"email\": \"teja@test.com\"\n},\n\n{\n    \"id\": \"8\",\n    \"name\": \"Ravi\",\n    \"email\": \"ravi@test.com\"\n},\n\n{\n    \"id\": \"9\",\n    \"name\": \"Pratik\",\n    \"email\": \"pratik@test.com\"\n},\n\n{\n    \"id\": \"10\",\n    \"name\": \"Akki\",\n    \"email\": \"akki@test.com\"\n},\n\n{\n    \"id\": \"11\",\n    \"name\": \"Ashu\",\n    \"email\": \"ashu@test.com\"\n},\n\n{\n    \"id\": \"12\",\n    \"name\": \"Astha\",\n    \"email\": \"astha@test.com\"\n}\n]"
+				},
+				"description": "POST request to Add users in the system"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/watches",
+			"request": {
+				"url": "http://localhost:8080/watches",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n    \"id\": \"1\",\n    \"model\": \"RAGA\",\n    \"make\": \"Titan\"\n\t},\n\n\t{\n    \"id\": \"2\",\n    \"model\": \"GOLD\",\n    \"make\": \"Rolex\"\n\t}\n]"
+				},
+				"description": "POST request to register watches in the system"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/watchCountForSale",
+			"request": {
+				"url": "http://localhost:8080/watchCountForSale",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"1\",\n    \"saleId\": \"1\",\n    \"watchId\": \"2\",\n    \"totalCountOfWatchForSale\" : \"2\",\n    \"countOfWatchesBooked\" : \"0\"\n}"
+				},
+				"description": "POST request to add the count of watch and watchId for the sale"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/registerUserForSale",
+			"request": {
+				"url": "http://localhost:8080/registerUserForSale",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\" : \"1\"\n\t\"userId\" : \"3\"\n    \"userEmail\": \"Amod@test.com\",\n    \"saleId\": \"3\",\n    \"watchId\": \"2\"\n}"
+				},
+				"description": "POST request to register user for the sale"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/bookWatch",
+			"request": {
+				"url": "http://localhost:8080/bookWatch",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"1\",\n    \"saleId\": \"3\",\n    \"watchId\": \"2\",\n    \"userId\" : \"3\"\n}"
+				},
+				"description": "POST request to book the watch from the sale"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/getRegisteredUseForSale",
+			"request": {
+				"url": "http://localhost:8080/getRegisteredUseForSale",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\n    \"id\": \"1\",\n    \"model\": \"Java small\",\n    \"make\": \"Java small description\"\n}]"
+				},
+				"description": "GET request to see who are the users registered for the sale"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/watches",
+			"request": {
+				"url": "http://localhost:8080/watches",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n    \"id\": \"1\",\n    \"model\": \"RAGA\",\n    \"make\": \"Titan\"\n\t},\n\n\t{\n    \"id\": \"2\",\n    \"model\": \"GOLD\",\n    \"make\": \"Rolex\"\n\t}\n]"
+				},
+				"description": "GET request to see all the watches in the system"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/watchCountForSale",
+			"request": {
+				"url": "http://localhost:8080/watchCountForSale",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"1\",\n    \"saleId\": \"1\",\n    \"watchId\": \"2\",\n    \"totalCountOfWatchForSale\" : \"2\",\n    \"countOfWatchesBooked\" : \"0\"\n}"
+				},
+				"description": "GET request to see count of watch for the sale"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/users",
+			"request": {
+				"url": "http://localhost:8080/users",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\n    \"id\": \"1\",\n    \"model\": \"Java small\",\n    \"make\": \"Java small description\"\n}]"
+				},
+				"description": "GET request to get all the users in the system"
+			},
+			"response": []
+		}
+	]
+}
